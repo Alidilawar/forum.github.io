@@ -1,0 +1,131 @@
+/* Portfolio */
+
+.container-portfolio {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 100px 0px;
+}
+.container-portfolio h1 {
+       color: #000000;
+       margin: 0px 0px 50px 0px;
+       font-family: 'Courier New', Courier, monospace;
+       font-weight: bold;
+       font-size: 68px;
+
+}
+.container-portfolio p {
+   color: #666;
+   font-size: 22px;
+}
+
+.portfolio-items {
+   margin: 0 auto;
+   text-align: center;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-gap: 3em;
+}
+
+.portfolio-items img {
+   width: 350px; 
+}
+
+.hvrbox {
+   position: relative;
+   display: inline-block;
+   overflow: hidden;
+   max-width: 350px;
+   height: auto;
+   margin: 0 auto;
+   text-align: center;
+}
+
+.hvrbox .hvrbox-layer {
+   opacity: 0;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   width: 350px;
+   background: rgba(0, 0, 0, 0.6);
+   color: #ffffff;
+   transition: all 0.4s ease-in-out 0s;
+}
+
+.hvrbox:hover .hvrbox-layer {
+   opacity: 1;
+}
+
+.hvrbox .hvrbox-position {
+   display: inline-block;
+   position: absolute;
+   top: 60%;
+   width: 100%;
+   left: 50%;
+   -webkit-transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+}
+
+.hvrbox h3 {
+   font-size: 14px;
+   color: #ffffff;
+   margin: 0;
+}
+
+.hvrbox h4 {
+  font-size: 20px;
+  color: #ffffff;
+  margin: 0;
+  padding: 6px 0px 40px 0;
+}
+
+/* Zoom effect */
+.hvrbox-zoom:hover img {
+  transform: scale(1.3);
+}
+/* Gray scale effect*/
+.hvrbox-grayscale img {
+    filter: gray;
+    -webkit-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -webkit-transition: all .6s ease;
+    -o-transition: all .6s ease;
+    transition: all .6s ease;
+    -webkit-backface-visibility: hidden;
+}
+
+
+.hvrbox-grayscale img:hover {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -moz-filter: grayscale( 0%);    
+}
+
+/* Blur Effect*/
+.hvrbox-blur img {
+    -webkit-filter: blur(2px);
+    -ms-filter: blur(2px);
+    -moz-filter: blur(2px);
+    filter: blur(2px);
+    -webkit-transition: all .6s ease;
+    -o-transition: all .6s ease;
+    transition: all .6s ease;
+    -webkit-backface-visibility: hidden;
+    margin: 0px 0px 50px 0px;
+}
+
+.hvrbox-blur img:hover {
+    -webkit-filter: blur(0px);
+    -ms-filter: blur(0px);
+    -moz-filter: blur(0px);
+    filter: blur(0px);
+    -webkit-transition: all .6s ease;
+    -o-transition: all .6s ease;
+    transition: all .6s ease;
+    -webkit-backface-visibility: hidden;    
+}
